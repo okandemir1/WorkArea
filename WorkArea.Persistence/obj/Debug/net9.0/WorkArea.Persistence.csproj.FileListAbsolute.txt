@@ -1,0 +1,16 @@
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/bin/Debug/net9.0/WorkArea.Persistence.deps.json
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/bin/Debug/net9.0/WorkArea.Persistence.dll
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/bin/Debug/net9.0/WorkArea.Persistence.pdb
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/bin/Debug/net9.0/WorkArea.Domain.dll
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/bin/Debug/net9.0/WorkArea.Domain.pdb
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.Persistence.csproj.AssemblyReference.cache
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.Persistence.AssemblyInfoInputs.cache
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.Persistence.AssemblyInfo.cs
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.Persistence.csproj.CoreCompileInputs.cache
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.Persistence.sourcelink.json
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.C9768BCA.Up2Date
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.Persistence.dll
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/refint/WorkArea.Persistence.dll
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/WorkArea.Persistence.pdb
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Persistence/obj/Debug/net9.0/ref/WorkArea.Persistence.dll

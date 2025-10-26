@@ -1,0 +1,12 @@
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/bin/Debug/net9.0/WorkArea.Domain.deps.json
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/bin/Debug/net9.0/WorkArea.Domain.dll
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/bin/Debug/net9.0/WorkArea.Domain.pdb
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/WorkArea.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/WorkArea.Domain.AssemblyInfoInputs.cache
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/WorkArea.Domain.AssemblyInfo.cs
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/WorkArea.Domain.csproj.CoreCompileInputs.cache
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/WorkArea.Domain.sourcelink.json
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/WorkArea.Domain.dll
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/refint/WorkArea.Domain.dll
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/WorkArea.Domain.pdb
+/Users/okandemir/Desktop/application/WorkArea/WorkArea.Domain/obj/Debug/net9.0/ref/WorkArea.Domain.dll

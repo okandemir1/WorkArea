@@ -1,0 +1,44 @@
+@{
+    var path = HttpContextAccessor.HttpContext.Request.Path;
+}
+<!DOCTYPE html>
+<html lang="tr" class="no-js" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="robots" content="@Html.Raw(ViewBag.Robots == null ? "index,follow" : ViewBag.Robots)" />
+
+    <meta name="twitter:title" content="@ViewBag.Title" />
+    <meta name="twitter:description" content="@ViewBag.Description" />
+
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:description" content="@ViewBag.Description" />
+
+    <link rel="canonical" href="@ViewBag.Canonical" />
+    <meta property="og:url" content="@ViewBag.Canonical" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <meta property="og:site_name" content="@ViewBag.Title" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:domain" content="@ViewBag.Canonical" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+</head>
+<body>
+
+    @RenderBody()
+
+    @RenderSection("scripts", false)
+</body>
+</html>
