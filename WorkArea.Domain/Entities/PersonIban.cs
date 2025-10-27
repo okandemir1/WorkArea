@@ -5,7 +5,6 @@ namespace WorkArea.Domain.Entities;
 public class PersonIban :  BaseEntityWithDate
 {
     public int UserId { get; set; }
-    public virtual User User { get; set; }
     
     public int PersonId { get; set; }
     public virtual Person Person { get; set; }

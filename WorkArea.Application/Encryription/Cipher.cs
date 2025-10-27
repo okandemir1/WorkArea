@@ -5,7 +5,12 @@
 
     public class Cipher
     {
-        private const string EncryptionKey = "1234567";
+        string EncryptionKey = "";
+
+        public Cipher(string key)
+        {
+            EncryptionKey = key;
+        }
 
         public string Encrypt(string clearText)
         {

@@ -1,2 +1,5 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@using WorkArea.App.WebUI.Helpers
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
+@inject SessionHelper session;
+@using WorkArea.Application.DTOs;

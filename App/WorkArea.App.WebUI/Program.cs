@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System.Globalization;
 using System.Text.Unicode;
+using WorkArea.App.WebUI.Helpers;
 using WorkArea.Infrastructure;
 
 var cultureInfo = new CultureInfo("tr-TR");
@@ -23,8 +24,7 @@ builder.Services.Configure<FormOptions>(options =>
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddMemoryCache();
 
-builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 
 builder.Services.AddSession(options =>
 {
@@ -54,10 +54,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     };
 });
 
+builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddAuthorization();
 builder.Services.AddSession();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+builder.Services.AddTransient<SessionHelper>();
 
 builder.Services.AddWebEncoders(o =>
 {
@@ -90,12 +91,9 @@ app.UseStaticFiles(new StaticFileOptions
     }
 });
 
-
 app.UseRouting();
 app.UseStaticFiles();
 app.UseStatusCodePages();
-
-app.UseRouting();
 app.UseAuthentication();
 app.UseSession();
 

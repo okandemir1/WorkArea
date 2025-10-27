@@ -12,10 +12,8 @@ namespace WorkArea.Application.Validation
             RuleFor(x => x.Email)
                 .NotEmpty().WithMessage("E-Posta Adresi Boş Olamaz")
                 .EmailAddress().WithMessage("Geçerli bir e-posta adresi giriniz.");
-            RuleFor(x => x.Firstname)
-                .NotEmpty().WithMessage("Adınız Boş Olamaz");
-            RuleFor(x => x.Surname)
-                .NotEmpty().WithMessage("Soyadınız Boş Olamaz");
+            RuleFor(x => x.Fullname)
+                .NotEmpty().WithMessage("Adınız Soyadınız Boş Olamaz");
             RuleFor(x => x.Username)
                 .NotEmpty().WithMessage("Kullanıcı Adı Boş Olamaz");
             RuleFor(x => x.RPassword)

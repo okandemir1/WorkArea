@@ -8,7 +8,6 @@ public class ShoppingListItem :  BaseEntityWithDate
     public virtual ShoppingList ShoppingList { get; set; }
     
     public int UserId { get; set; }
-    public virtual User User { get; set; }
     
     public string Name { get; set; } = string.Empty;
 }

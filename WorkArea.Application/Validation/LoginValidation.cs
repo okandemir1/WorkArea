@@ -11,6 +11,8 @@ namespace WorkArea.Application.Validation
                 .NotEmpty().WithMessage("Kullanıcı Adı Boş Olamaz");
             RuleFor(x => x.Password)
                 .NotEmpty().WithMessage("Şifre Boş Olamaz");
+            RuleFor(x => x.SecretKey)
+                .NotEmpty().WithMessage("Gizli Şifre Boş Olamaz");
         }
     }
 }

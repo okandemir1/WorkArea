@@ -5,7 +5,6 @@ namespace WorkArea.Domain.Entities;
 public class NoteHashtag :  BaseEntityWithDate
 {
     public int UserId { get; set; }
-    public virtual User User { get; set; }
     
     public int NoteId { get; set; }
     public virtual Note Note { get; set; }

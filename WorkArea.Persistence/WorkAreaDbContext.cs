@@ -11,6 +11,20 @@
     public class WorkAreaDbContext : DbContext
     {
         public DbSet<Archive> Archives { get; set; }
+        public DbSet<ArchiveType> ArchiveTypes { get; set; }
+        public DbSet<Expense> Expenses { get; set; }
+        public DbSet<Installment> Installments { get; set; }
+        public DbSet<InstallmentItem> InstallmentItems { get; set; }
+        public DbSet<Note> Notes { get; set; }
+        public DbSet<NoteHashtag> NoteHashtags { get; set; }
+        public DbSet<NoteMention> NoteMentions { get; set; }
+        public DbSet<Person> Persons { get; set; }
+        public DbSet<PersonDebt> PersonDebts { get; set; }
+        public DbSet<PersonDebtHistory> PersonDebtHistories { get; set; }
+        public DbSet<PersonIban> PersonIbans { get; set; }
+        public DbSet<ShoppingList> ShoppingLists { get; set; }
+        public DbSet<ShoppingListItem> ShoppingListItems { get; set; }
+        public DbSet<ShoppingListUser> ShoppingListUsers { get; set; }
         public DbSet<User> Users { get; set; }
 
         public WorkAreaDbContext(DbContextOptions<WorkAreaDbContext> options) : base(options)

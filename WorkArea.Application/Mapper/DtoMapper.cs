@@ -9,6 +9,7 @@
         public DtoMapper()
         {
             CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<User, UserSimpleDto>().ReverseMap();
         }
     }
 }
