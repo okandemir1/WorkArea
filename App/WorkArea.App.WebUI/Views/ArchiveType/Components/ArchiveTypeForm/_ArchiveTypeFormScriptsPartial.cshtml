@@ -1,0 +1,42 @@
+﻿<script>
+    function OnFormBegin() {
+        $(".loaderBox").css("display", "flex");
+    }
+    function OnFormSuccess(result) {
+        $(".loaderBox").css("display", "none");
+        if(result.isSucceed){
+            Swal.fire({
+                title: result.title,
+                html: result.message,
+                icon: "success",
+                showDenyButton: true,
+                confirmButtonText: "Tamam",
+                denyButtonText: `Düzenle`
+            }).then((r) => {
+                if (r.isConfirmed) {
+                    location.href = "/ArchiveType/";
+                }
+                else if (r.isDenied) {
+                    location.href = "/ArchiveType/Edit/"+result.id;
+                }
+            });
+        }
+        else{
+            let customMessage = '<p>'+result.message+'</p>';
+            if(result.errors != null && result.errors.length > 0) {
+                customMessage += '<ul>'
+                for(i in result.errors){
+                    let er = result.errors[i];
+                    customMessage += '<li>' + er + '</li>';
+                }
+                customMessage += '</ul>';
+            }
+
+            Swal.fire({
+                title: result.title,
+                html: customMessage,
+                icon: "error"
+            });
+        }
+    }
+</script>

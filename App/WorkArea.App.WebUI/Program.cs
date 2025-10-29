@@ -99,7 +99,7 @@ app.UseSession();
 
 app.UseMvc(routes =>
 {
-    routes.MapRoute("default", "{controller}/{action}", new { controller = "home", action = "index" });
+    routes.MapRoute("default", "{controller}/{action}/{id?}", new { controller = "home", action = "index" });
 });
 
 app.Run();

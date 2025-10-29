@@ -56,90 +56,95 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="~/css/adminlte.css" />
+    <link rel="stylesheet" href="~/css/adminlte.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
     <!--end::Required Plugin(AdminLTE)-->
   </head>
   <!--end::Head-->
   <!--begin::Body-->
   <body class="login-page bg-body-secondary">
-    <div class="login-box">
-      <div class="card card-outline card-primary">
-        <div class="card-header">
-            <h1 class="mb-0 d-flex justify-content-center"><b>Admin</b>LTE</h1>
-        </div>
-        <div class="card-body login-card-body">
-          <p class="login-box-msg">Sign in to start your session</p>
-          <form class="login-form" asp-action="Login" asp-controller="Auth"
-                data-ajax="true" data-ajax-method="POST"
-                data-ajax-success="OnFormSuccess" data-ajax-failure="ErrorForm" data-ajax-begin="BeginForm">
-            <div class="input-group mb-1">
-              <div class="form-floating">
-                <input id="loginEmail" name="Username" type="text" class="form-control" value="" placeholder="Kullanıcı Adınızı Giriniz" />
-                <label for="loginEmail">Kullanıcı Adı</label>
-              </div>
-              <div class="input-group-text"><span class="bi bi-envelope"></span></div>
-            </div>
-            <div class="input-group mb-1">
-              <div class="form-floating">
-                <input id="loginPassword" name="Password" type="password" class="form-control" placeholder="Parolanızı Giriniz" />
-                <label for="loginPassword">Parola</label>
-              </div>
-              <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
-            </div>
-            <div class="input-group mb-1">
-              <div class="form-floating">
-                <input id="loginKey" name="SecretKey" type="password" class="form-control" placeholder="Gizli Şifrenizi Girin" />
-                <label for="loginKey">Gizli Şifre</label>
-              </div>
-              <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
-            </div>
-            <!--begin::Row-->
-            <div class="row">
-              <div class="col-8 d-inline-flex align-items-center">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label class="form-check-label" for="flexCheckDefault"> Remember Me </label>
-                </div>
-              </div>
-              <!-- /.col -->
-              <div class="col-4">
-                <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-primary">Giriş Yap</button>
-                </div>
-              </div>
-              <!-- /.col -->
-            </div>
-            <!--end::Row-->
-          </form>
-          <!-- /.social-auth-links -->
-          <p class="mb-1"><a href="forgot-password.html">I forgot my password</a></p>
-          <p class="mb-0">
-            <a href="register.html" class="text-center"> Register a new membership </a>
-          </p>
-        </div>
-        <!-- /.login-card-body -->
-      </div>
+  <div class="loaderBox">
+    <div class="loaderOverlay"></div>
+    <div class="loaderBar">
+      <span class="loader"></span>
+      <h4 class="loaderTitle">Lütfen Bekleyiniz</h4>
     </div>
-    <!-- /.login-box -->
-    <!--begin::Third Party Plugin(OverlayScrollbars)-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="~/js/adminlte.js"></script>
-    <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
-    <script>
+  </div>
+  
+  <div class="login-box">
+    <div class="card card-outline card-primary">
+      <div class="card-header">
+        <h1 class="mb-0 d-flex justify-content-center"><b>Kendime</b>Not</h1>
+      </div>
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">Hesabınıza Giriş Yapınız</p>
+        <form class="login-form" asp-action="Login" asp-controller="Auth"
+              data-ajax="true" data-ajax-method="POST"
+              data-ajax-success="OnFormSuccess" data-ajax-failure="ErrorForm" data-ajax-begin="BeginForm">
+          <div class="input-group mb-1">
+            <div class="form-floating">
+              <input id="loginEmail" name="Username" type="text" class="form-control" value="" placeholder="Kullanıcı Adınızı Giriniz"/>
+              <label for="loginEmail">Kullanıcı Adı</label>
+            </div>
+            <div class="input-group-text"><span class="bi bi-person"></span></div>
+          </div>
+          <div class="input-group mb-1">
+            <div class="form-floating">
+              <input id="loginPassword" name="Password" type="password" class="form-control" placeholder="Parolanızı Giriniz"/>
+              <label for="loginPassword">Parola</label>
+            </div>
+            <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+          </div>
+          <div class="input-group mb-1">
+            <div class="form-floating">
+              <input id="loginKey" name="SecretKey" type="password" class="form-control" placeholder="Gizli Şifrenizi Girin"/>
+              <label for="loginKey">Gizli Şifre</label>
+            </div>
+            <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+          </div>
+          <!--begin::Row-->
+          <div class="row">
+            <div class="col-8 d-inline-flex align-items-center">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                <label class="form-check-label" for="flexCheckDefault"> Beni Hatırla </label>
+              </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-4">
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+              </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!--end::Row-->
+        </form>
+        <!-- /.social-auth-links -->
+        <p class="mb-0">
+          <a href="@Url.Action("Register", "Auth")" class="text-center"> Henüz hesabınız yok mu? Üye Ol </a>
+        </p>
+      </div>
+      <!-- /.login-card-body -->
+    </div>
+  </div>
+  <!-- /.login-box -->
+  <!--begin::Third Party Plugin(OverlayScrollbars)-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"
+    crossorigin="anonymous"></script>
+  <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+    crossorigin="anonymous"></script>
+  <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+  <script src="~/js/adminlte.js"></script>
+  <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+  <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
       const Default = {
         scrollbarTheme: 'os-theme-dark',
@@ -159,14 +164,15 @@
         }
       });
     </script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="~/js/jquery.unobtrusive-ajax.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="~/js/jquery.unobtrusive-ajax.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
       function BeginForm(){
-        console.log("loader aç");
+        $(".loaderBox").css("display", "flex");
       }
       function ErrorForm(e){
+        $(".loaderBox").css("display", "none");
         Swal.fire({
           title: "Hay Aksi",
           html: "Sistemsel bir hata oluştu. Lütfen daha sonra tekrar deneyiniz. Hata yöneticilere bildirildi.",
@@ -175,17 +181,19 @@
       }
       function OnFormSuccess(result) {
         if(result.isSucceed){
+          $(".loaderBox").css("display", "none");
           Swal.fire({
             title: result.title,
             html: result.message,
             icon: "success"
-          }).then((result) => {
-            if (result.isConfirmed) {
+          }).then((r) => {
+            if (r.isConfirmed) {
               location.href = result.redirect;
             }
           });
         }
         else{
+          $(".loaderBox").css("display", "none");
           let customMessage = '<p>'+result.message+'</p>';
           if(result.errors != null && result.errors.length > 0) {
             customMessage += '<ul>'
@@ -202,9 +210,7 @@
             icon: "error"
           });
         }
-        
-        console.log(result);
       }
     </script>
-    </body>
+  </body>
 </html>

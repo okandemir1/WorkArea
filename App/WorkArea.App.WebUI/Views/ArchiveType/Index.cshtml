@@ -1,0 +1,116 @@
+@{
+  var title = "Arşiv Tipleri";
+    ViewBag.Title = title;
+    ViewBag.Description = "aaaa";
+    ViewBag.Canonical = Url.Action("Index", "ArchiveType");
+}
+<div class="app-content-header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6"><h3 class="mb-0">@title</h3></div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-end">
+          <li class="breadcrumb-item"><a href="/">Dasboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">@title</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="app-content">
+  <div class="card mb-4">
+    <div class="card-header">
+      <h3 class="card-title">@title</h3>
+      <div class="card-tools">
+        <a href="@Url.Action("Create","ArchiveType")" class="btn btn-success">Yeni Ekle</a>
+      </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+      <table id="myTable" class="table table-striped" role="table">
+        <thead>
+        <tr>
+          <th style="width: 10px" scope="col">#</th>
+          <th scope="col">Name</th>
+          <th style="width: 100px" scope="col">#</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</div>
+
+
+@section styles{
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+}
+@section scripts{
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var oTable = new DataTable("#myTable",
+      {
+        serverSide: true,
+        responsive: true,
+        language: {
+          url: '/js/datatable.turkish.json',
+        },
+        ajax: {
+          url: "@Url.Action("GetAllData", "ArchiveType")",
+          "type": "POST",
+          "datatype": "json",
+        },
+        order: [[0, 'desc']],
+        "columns": [
+          {"data": "id", "name": "Id", "autoWidth": true},
+          {"data": "name", "name": "Name", "autoWidth": true},
+          {
+            "data": "id", "name": "Id", "autoWidth": true,
+            "render": function (data, type, full, meta) {
+              var retHtml = "";
+              retHtml += '<a class="badge bg-primary text-decoration-none me-2" href="/ArchiveType/Edit/' + full.id + '">Düzenle</a>';
+              retHtml += '<a class="badge bg-danger deleteItem" data-id="'+full.id+'">Sil</a>';
+              return retHtml;
+            }
+          },
+        ],
+      });
+    
+    $("body").on("click", ".deleteItem", function (){
+      let itemId = $(this).attr("data-id");
+      Swal.fire({
+          title: "Kaydı Silmek İstediğinize Emin Misiniz?",
+          showDenyButton: true,
+          confirmButtonText: "Evet, Sil",
+          denyButtonText: `Hayır, İptal`
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.get("/ArchiveType/Delete/"+itemId, function (response){
+              if(response.isSucceed){
+                Swal.fire({
+                  title: "Başarılı",
+                  text: response.message,
+                  icon: "success"
+                }).then((result) => {
+                  location.reload();
+                });
+              }
+              else{
+                Swal.fire({
+                  title: "Hay Aksi",
+                  text: response.message,
+                  icon: "error"
+                });
+              }
+            });
+          }
+  });
+    });
+  });
+</script>
+}
+

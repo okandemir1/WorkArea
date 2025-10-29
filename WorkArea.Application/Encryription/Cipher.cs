@@ -9,7 +9,10 @@
 
         public Cipher(string key)
         {
-            EncryptionKey = key;
+            if(string.IsNullOrWhiteSpace(key))
+                EncryptionKey = "qaz1wsx";    
+            else
+                EncryptionKey = key;
         }
 
         public string Encrypt(string clearText)

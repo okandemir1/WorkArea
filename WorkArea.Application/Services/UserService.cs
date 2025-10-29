@@ -12,17 +12,16 @@ namespace WorkArea.Application.Services;
 
 public class UserService(IRepository<User> userRepository)
 {
+    readonly Cipher _cipherStatic = new Cipher("");
     public async Task<DbOperationResult<UserDto?>> WebRegister(RegisterRequestModel model)
     {
         Cipher cipher = new Cipher(model.SecretKey);
-        Cipher cipherStatic = new Cipher("qsdwr12");
         var username = cipher.Encrypt(model.Username);
         var userExist = await userRepository.ListQueryableNoTracking
             .Where(x => x.Username == username && !x.IsDeleted).AnyAsync();
         
         if(userExist)
             return new DbOperationResult<UserDto?>(false, "Username already exists", null);
-
 
         var newUserModel = new User()
         {
@@ -31,7 +30,7 @@ public class UserService(IRepository<User> userRepository)
             Password = cipher.Encrypt(model.Password),
             Email = cipher.Encrypt(model.Email),
             PhoneNumber = cipher.Encrypt(model.PhoneNumber),
-            Fullname = cipherStatic.Encrypt(model.Email),
+            Fullname = _cipherStatic.Encrypt(model.Fullname),
             PushToken = "a",
             Avatar = "https://placehold.co/128",
             CreateDate = DateTime.Now,
@@ -44,7 +43,6 @@ public class UserService(IRepository<User> userRepository)
             var userDto = ObjectMapper.Mapper.Map<UserDto>(newUserModel);
             return new DbOperationResult<UserDto?>(true, "", userDto);
         }
-        
         
         return new DbOperationResult<UserDto>(false, insert.Message, insert.Errors, null);
     }
@@ -74,6 +72,8 @@ public class UserService(IRepository<User> userRepository)
             .ProjectTo<UserSimpleDto>(ObjectMapper.Mapper.ConfigurationProvider)
             .FirstOrDefaultAsync(x => x.Id == userId);
 
+        data.Fullname = _cipherStatic.Decrypt(data.Fullname);
+        
         return data;
     }
 }

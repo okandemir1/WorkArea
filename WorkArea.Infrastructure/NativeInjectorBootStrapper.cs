@@ -20,6 +20,7 @@ public static class NativeInjectorBootStrapper
     public static void RegisterServices(this IServiceCollection services
         , IConfiguration configuration)
     {
+        services.AddTransient<ArchiveTypeService>();
         services.AddTransient<UserService>();
         
         services.AddScoped<EmailService>();

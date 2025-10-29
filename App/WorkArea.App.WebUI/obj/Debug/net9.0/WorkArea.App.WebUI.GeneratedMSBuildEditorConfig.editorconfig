@@ -28,12 +28,32 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/Auth/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = 
+[/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/ArchiveType/Components/ArchiveTypeForm/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2ZVR5cGUvQ29tcG9uZW50cy9BcmNoaXZlVHlwZUZvcm0vRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/ArchiveType/Components/ArchiveTypeForm/_ArchiveTypeFormScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2ZVR5cGUvQ29tcG9uZW50cy9BcmNoaXZlVHlwZUZvcm0vX0FyY2hpdmVUeXBlRm9ybVNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/ArchiveType/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2ZVR5cGUvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/ArchiveType/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2ZVR5cGUvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/ArchiveType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2ZVR5cGUvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/okandemir/Desktop/application/WorkArea/App/WorkArea.App.WebUI/Views/Home/Index.cshtml]

@@ -97,7 +97,7 @@ public class AuthController(UserService userService, SessionHelper sessionHelper
                 new ClaimsPrincipal(claimsIdentity),
                 authProperties);
             
-            return Json(new { isSucceed = true, message = "Giriş yapıldı", title = "Başarılı", errors, redirect = "/Home/Index" });
+            return Json(new { isSucceed = true, message = "Üyelik işlemi başarılı", title = "Başarılı", errors, redirect = "/Home/Index" });
         }
         
         return Json(new { isSucceed = false, message = "Eksik veya hatalı veri girişi", title = "Hay Aksi", errors, redirect = "" });

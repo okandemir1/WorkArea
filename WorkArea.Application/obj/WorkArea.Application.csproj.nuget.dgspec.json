@@ -59,9 +59,17 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
+            "LinqConditionalExtensions": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
             "PasswordGenerator": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.6.9, )"
             }
           },
           "imports": [

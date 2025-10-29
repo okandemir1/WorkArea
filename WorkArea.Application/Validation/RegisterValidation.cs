@@ -9,6 +9,10 @@ namespace WorkArea.Application.Validation
         {
             RuleFor(x => x.Password)
                 .NotEmpty().WithMessage("Şifre Boş Olamaz");
+            RuleFor(x => x.SecretKey)
+                .NotEmpty().WithMessage("Gizli Şifre Boş Olamaz")
+                .MinimumLength(7).WithMessage("Gizli Şifre toplam 7 karakter girilmeli")
+                .MaximumLength(7).WithMessage("Gizli Şifre toplam 7 karakter girilmeli");
             RuleFor(x => x.Email)
                 .NotEmpty().WithMessage("E-Posta Adresi Boş Olamaz")
                 .EmailAddress().WithMessage("Geçerli bir e-posta adresi giriniz.");
